@@ -1,0 +1,80 @@
+Questions from: https://github.com/h5bp/Front-end-Developer-Interview-Questions.git
+
+
+
+What did you learn yesterday/this week?
+//I learned to use a C++ framework called SDL to generate a cool animation.
+What excites or interests you about coding?
+
+//The fact that I can learn virtually everything I need to know to make a cool program from Google. How everything
+//I need to make a project is just in one place, my computer.
+
+What is a recent technical challenge you experienced and how did you solve it?
+//I had to blur pixels out as they were being updated to a new location. 
+	//1. I had a double for loop that ran through my double array which held the information for the colors of every pixel on my page.
+	//2. I had two more for loops that ran from -1 to 0 to 1, creating a 3 by 3 matrix. 
+	//3. Inside these two for loops I would add all the colors of the pixels in the 3 by 3 matrix and take the average color from those 9 pixels.
+	//4. I would update the pixels on the screen with the average color of the 3 by 3 matrix surrounding that pixel.
+
+What UI, Security, Performance, SEO, Maintainability or Technology considerations do you make while building a web application or site?
+	//A good UI is one that is easy to use and aesthetically pleasing. I use consistent color schemes and layout themes throughout my webpages and also consider intricate details like where certain buttons should pop up when other buttons are pressed. Where to put certain functionality that makes sense to a user's flow of the page. Usually Western users read things from left to right and top to bottom or focus on whats at the center of a page. With this in mind I would put the most important aspects of my product at the center of a page and anything they might be looking for at the top left. This may include the settings or their personal profile.
+
+	//As for security, I have used bcrypt to hash a password before storing it. To increase security of their password I added a salt with additional salting rounds as well to make it extremely hard for hackers to guess their passwords.
+
+	//Performance can be optimized by either minimizing my javascript package using uglify.js or webpack production bundles. Additionally Lazy loading is a great way to optimize load times so users are not waiting for 30 seconds for the main page to load.
+
+	//SEO can be done by adding meta tags to a site or by changing the title to the search words that people would commonly think of to get to my site.
+
+	//Maintainability can be improved by using style guides such as Airbnb's or standard/semistandard so that it looks like one programmer wrote an entire code base.
+
+	//Technology considerations are tricky. Before building a website I would consider how much time I have to build it first. IF there is plenty of time then I would pick the best technologies to work with like React for the front end. This will make the website run a lot faster as the virtual DOM speeds up update times of variables. 
+
+	//If there is less time to work on it then I would choose Angular for the job, there is more online help as the Angular community is a lot bigger than that of the React. This means that there will be more documentation and stack overflow questions to help me build my web application.
+
+
+Talk about your preferred development environment.
+//iOS with sublime txt, UNIX command line, Chrome for my browser and git for version control.
+
+Can you describe your workflow when you create a web page?
+//After I get an idea in my head, I sit down with my team and think of a design for each page. We draw out what each page should look like, where the buttons should appear and what colors and styles should it look like. 
+//After drawing it out, I like to use user stories to talk through what our webpage sketches look like from the perspective of a consumer and see if our pages have a good UI so that things are easily found and easy to work with.
+//When we've convinced ourselves of that I set up my task runners and webpack if I need to and get the file skeleton down.
+//I like to start by implementing my backend so that I have data to query from to display on my front end.
+//then I begin creating the web page. While I'm writing code, before I push it to Github I like to have a friend make sure theres no terrible errors going on and just have a second pair of eyes to see that the whole thing is working before I push it up.
+//Then the cycle continues, we can continue to sketch up new ideas for new designs, continue coding, improving our task manager and other things as well.
+
+
+If you have 5 different stylesheets, how would you best integrate them into the site?
+
+Can you describe the difference between progressive enhancement and graceful degradation?
+//Progressive enhancement is the process of starting from a prototype and slowly building it up to a fully functional product.
+
+//Graceful degredation is when you go for a fully finished product and cut out the parts you dont want.
+
+//I find that Progressive enhancement is a better option because you can build out a prototype and see if the final product you're building towards is something that you really want. This can save a lot of time in a professional setting
+
+How would you optimize a website's assets/resources?
+
+How many resources will a browser download from a given domain at a time?
+What are the exceptions?
+Name 3 ways to decrease page load (perceived or actual load time).
+If you jumped on a project and they used tabs and you used spaces, what would you do?
+Describe how you would create a simple slideshow page.
+If you could master one technology this year, what would it be?
+Explain the importance of standards and standards bodies.
+What is Flash of Unstyled Content? How do you avoid FOUC?
+Explain what ARIA and screenreaders are, and how to make a website accessible.
+Explain some of the pros and cons for CSS animations versus JavaScript animations.
+What does CORS stand for and what issue does it address?
+
+
+Fun Questions:
+
+What's a cool project that you've recently worked on?
+What are some things you like about the developer tools you use?
+Who inspires you in the front-end community?
+Do you have any pet projects? What kind?
+What's your favorite feature of Internet Explorer?
+How do you like your coffee?
+
+

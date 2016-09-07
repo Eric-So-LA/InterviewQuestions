@@ -1,0 +1,8 @@
+How would you deal with scalability?
+With my server loaded on an AWS EC2 instance, there are several options to making sure it scales well with more and more users.
+
+If I am using an Elastic Bean stalk, I can resize the instance when i find that demand is getting too big or too small for the size of my instance. Additionally, EBS can implement load balancing which means it will take requests from a server that is backed up and give those requests to a different server.
+
+EBS handles the load balancing and auto scaling of the application.
+
+I have not had the need for EBS yet as I was making small open source applications. But I've been looking forward to deploying an app that has EBS implemented

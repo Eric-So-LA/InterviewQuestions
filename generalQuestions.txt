@@ -45,7 +45,7 @@ Can you describe your workflow when you create a web page?
 
 
 If you have 5 different stylesheets, how would you best integrate them into the site?
-
+ d
 Can you describe the difference between progressive enhancement and graceful degradation?
 //Progressive enhancement is the process of starting from a prototype and slowly building it up to a fully functional product.
 
@@ -56,15 +56,33 @@ Can you describe the difference between progressive enhancement and graceful deg
 How would you optimize a website's assets/resources?
 
 How many resources will a browser download from a given domain at a time?
+Chrome will download 6 resources at a time.
+
 What are the exceptions?
+other browsers download different numbers at a time, Firefox downloads 8.
+
 Name 3 ways to decrease page load (perceived or actual load time).
+1.Lazy Loading,
+2.decrease number of requests coming from your browser. This could include image sprites.
+3.Packing up your code with a minifier like uglifyjs or webpack bundler.
+
+
 If you jumped on a project and they used tabs and you used spaces, what would you do?
+I would change my spaces to match theirs.
+
 Describe how you would create a simple slideshow page.
+I could store the links to each image in the slide show in an array. Then I could add a forward and backwards buttons. Everytime the user clicks the forwards or backwards buttons 
 If you could master one technology this year, what would it be?
+
 Explain the importance of standards and standards bodies.
 What is Flash of Unstyled Content? How do you avoid FOUC?
+It's when you see content on the page thats unstyled for a moment before it applies the styling. To avoid this I put all my script tags at the end of my html and the styling inside my header tags.
+
 Explain what ARIA and screenreaders are, and how to make a website accessible.
+
 Explain some of the pros and cons for CSS animations versus JavaScript animations.
+Javascript Animation takes more processing power out of a browser. Javascript can do more intricate animations however, you can customize it more.
+
 What does CORS stand for and what issue does it address?
 
 

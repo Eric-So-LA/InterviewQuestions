@@ -1,0 +1,147 @@
+JS Questions:
+
+Explain event delegation
+event delegation is when a parent dom node has an event listener that listens for events that bubble up from child listeners. This helps with efficiency since you have fewer listeners running at a time on your DOM.
+
+Explain how this works in JavaScript
+When an element is clicked or interacted with, event bubbling occurs as that event spreads up through all its ancestors. Also, the event has a target property which will identify which child of the parent is clicked.
+
+Explain how prototypal inheritance works
+If an object in javascript does not have a property then it will reach up in its prototypal chain to see if the property exists on its parent prototype. This chain continues until it reaches Javascripts parent object.
+
+What do you think of AMD vs CommonJS?
+These are module systems. I know AMD is known to have faster startup times than CommonJS and better especially for client side since it will make a customers application run a little faster. CommonJs is simpler and easier to understand. CommonJS and ES2015 modules.
+
+Explain why the following doesn't work as an IIFE: function foo(){ }();.
+This is read as a function statement, the function needs to be wrapped in parenthesis so the compiler knows its a function expression thats coming.
+
+What's the difference between a variable that is: null, undefined or undeclared?
+null is an assigned value that means theres nothing there. Set by the programmer.
+
+Undefined means there has been a variable declared but it does not have a value set yet.
+
+undeclared means that variable does not exist and has not been declared.
+
+How would you go about checking for any of these states?
+you can console log the variable and it will return null, undefined or give an error if it hasn't been declared.
+You can also check the typeof undefined and null.
+Null will return an object and undefined will be undefined.
+
+What is a closure, and how/why would you use one?
+A closure is when data of a function is store in a scope that cannot be reached outside of the function without help of methods. I would use one to keep private variables away from hands of developers to keep them from changing variables that may affect an API i am making.
+
+What's a typical use case for anonymous functions?
+Anonymous functions are commonly used as callback functions like forEach, map, reduce.
+
+How do you organize your code? (module pattern, classical inheritance?)
+
+What's the difference between host objects and native objects?
+Host objects are given by the environment you're in, such as the browser. Native objects are given if you are writing in Javascript. This includes Number, Array, etc.
+
+Difference between: function Person(){}, var person = Person(), and var person = new Person()?
+1st is a function definition
+2nd one is you set a variable "person" to the return value of the Person function.
+3rd is you are instantiating an object and storing it in the variable person.
+
+What's the difference between .call and .apply?
+The difference is that you list the arguments to the function you are calling in an array. Call lists the arguments with commas.
+Explain Function.prototype.bind.
+bind accepts an objects context of "this" as its first parameter and stores the extra arguments as arguments to the method being called. However, bind does not invoke the function, instead you can store the return value of bind to a variable and invoke that variable when you want.
+
+When would you use document.write()?
+
+What's the difference between feature detection, feature inference, and using the UA string?
+
+Explain Ajax in as much detail as possible.
+
+What are the advantages and disadvantages of using Ajax?
+
+Explain how JSONP works (and how it's not really Ajax).
+Have you ever used JavaScript templating?
+If so, what libraries have you used?
+Explain "hoisting".
+When compiler first runs through your code, it will look for all function statements and variables that are defined. It will "hoist" all those to the top of your page so that everything in your scope will have access to those variables or functions.
+
+Describe event bubbling.
+
+What's the difference between an "attribute" and a "property"?
+attribuet is always a string of a dom node. Properties have values that can be anything. If an element has a default value, the attribute will remain with the default value even if that property is changed.
+
+Why is extending built-in JavaScript objects not a good idea?
+Other developers working on your code may not know that you are extending the Array prototype for example. Also, if a browser update writes a method with the same name then they will overwrite your method.
+
+Difference between document load event and document DOMContentLoaded event?
+
+What is the difference between == and ===?
+The triple equals checks if the two items in comparison have the same type. Like if both are strings or both are numbers. The double equals sign will coerce one element to match the other ones type if they are different then check.
+
+Explain the same-origin policy with regards to JavaScript.
+If scripts in a first webpage can access the data in a second web page if they share the same origin.
+
+Make this work:
+duplicate([1,2,3,4,5]); // [1,2,3,4,5,1,2,3,4,5]
+see toyproblems folder
+
+Why is it called a Ternary expression, what does the word "Ternary" indicate?
+What is "use strict";? what are the advantages and disadvantages to using it?
+Create a for loop that iterates up to 100 while outputting "fizz" at multiples of 3, "buzz" at multiples of 5 and "fizzbuzz" at multiples of 3 and 5
+Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+Why would you use something like the load event? Does this event have disadvantages? Do you know any alternatives, and why would you use those?
+Explain what a single page app is and how to make one SEO-friendly.
+
+What is the extent of your experience with Promises and/or their polyfills?
+What are the pros and cons of using Promises instead of callbacks?
+It boils down to how promises are composable and cut down on code after you chain several together. If you chain several callbacks together you are prone to errors and you will end up nesting callback after callback. If you have a ton of asynchronous functions that need to fire one after another promises can significantly cut down on the pains of writing the code.
+
+What are some of the advantages/disadvantages of writing JavaScript code in a language that compiles to JavaScript?
+What tools and techniques do you use debugging JavaScript code?
+What language constructions do you use for iterating over object properties and array items?
+Explain the difference between mutable and immutable objects.
+What is an example of an immutable object in JavaScript?
+What are the pros and cons of immutability?
+How can you achieve immutability in your own code?
+Explain the difference between synchronous and asynchronous functions.
+What is event loop?
+What is the difference between call stack and task queue?
+Explain the differences on the usage of foo between function foo() {} and var foo = function() {}
+
+Coding Questions:
+
+Question: What is the value of foo?
+
+var foo = 10 + '20';
+Question: How would you make this work?
+
+add(2, 5); // 7
+add(2)(5); // 7
+Question: What value is returned from the following statement?
+
+"i'm a lasagna hog".split("").reverse().join("");
+Question: What is the value of window.foo?
+
+( window.foo || ( window.foo = "bar" ) );
+Question: What is the outcome of the two alerts below?
+
+var foo = "Hello";
+(function() {
+  var bar = " World";
+  alert(foo + bar);
+})();
+alert(foo + bar);
+Question: What is the value of foo.length?
+
+var foo = [];
+foo.push(1);
+foo.push(2);
+Question: What is the value of foo.x?
+
+var foo = {n: 1};
+var bar = foo;
+foo.x = foo = {n: 2};
+Question: What does the following code print?
+
+console.log('one');
+setTimeout(function() {
+  console.log('two');
+}, 0);
+console.log('three');

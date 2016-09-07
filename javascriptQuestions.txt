@@ -103,6 +103,7 @@ How can you achieve immutability in your own code?
 Explain the difference between synchronous and asynchronous functions.
 What is event loop?
 What is the difference between call stack and task queue?
+
 Explain the differences on the usage of foo between function foo() {} and var foo = function() {}
 
 Coding Questions:
